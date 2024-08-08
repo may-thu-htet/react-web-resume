@@ -1,0 +1,20 @@
+.summary-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: Gupter;
+  font-size: large;
+  line-height: 25px;
+  text-align: justify;
+}
+
+.visa-status {
+  font-size: larger;
+  font-style: italic;
+  font-weight: bold;
+  margin: 10px 0 0 0;
+}
+
+.self-description {
+  margin: 0;
+}

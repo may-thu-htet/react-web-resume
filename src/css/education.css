@@ -1,0 +1,29 @@
+.education-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: Gupter;
+  font-size: large;
+  line-height: 25px;
+  text-align: justify;
+}
+
+.education-title {
+  text-decoration: underline;
+  font-size: larger;
+  margin-bottom: 0px;
+}
+
+.university {
+  margin-left: 10px;
+  color: #5e338a;
+}
+
+.result {
+  margin: 0;
+}
+
+.degree {
+  margin: 0;
+  font-weight: bold;
+}

@@ -1,0 +1,33 @@
+.hobby-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: Gupter;
+  font-size: large;
+  line-height: 25px;
+  text-align: justify;
+}
+
+.hobby-title {
+  font-size: larger;
+  margin-bottom: 0px;
+  text-decoration: underline;
+}
+
+.hobby-icons {
+  display: flex;
+  gap: 25px;
+  color: #8105fd;
+}
+
+.palette-icon:hover {
+  color: #e45bff;
+}
+
+.airport-icon:hover {
+  color: #e45bff;
+}
+
+.musicnote-icon:hover {
+  color: #e45bff;
+}

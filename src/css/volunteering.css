@@ -1,0 +1,30 @@
+.volunteer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: Gupter;
+  font-size: large;
+  line-height: 25px;
+  text-align: justify;
+}
+
+.volunteer-title {
+  text-decoration: underline;
+  font-size: larger;
+  margin-bottom: 0;
+}
+
+.volunteer-roles {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.volunteer-role {
+  margin: 0;
+  font-weight: bold;
+}
+
+.duty {
+  margin: 0;
+}
