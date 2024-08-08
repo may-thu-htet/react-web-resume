@@ -1,0 +1,16 @@
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: Gupter;
+  font-size: large;
+  line-height: 25px;
+  text-align: justify;
+}
+
+.skills-title {
+  font-family: Gupter;
+  font-size: larger;
+  margin-bottom: 0;
+  text-decoration: underline;
+}
