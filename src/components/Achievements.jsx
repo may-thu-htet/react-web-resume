@@ -79,6 +79,7 @@ function Achievements() {
                   fontWeight: "bold",
                   fontFamily: "Gupter, serif",
                   fontSize: isSmallScreen ? "medium" : "large",
+                  "-webkit-text-size-adjust": "100%", // Prevent iOS scaling
                 }}
               >
                 Date
@@ -88,6 +89,7 @@ function Achievements() {
                   fontWeight: "bold",
                   fontFamily: "Gupter, serif",
                   fontSize: isSmallScreen ? "medium" : "large",
+                  "-webkit-text-size-adjust": "100%", // Prevent iOS scaling
                 }}
               >
                 Achievements
@@ -107,6 +109,7 @@ function Achievements() {
                   sx={{
                     fontFamily: "Gupter, serif",
                     fontSize: isSmallScreen ? "medium" : "large",
+                    "-webkit-text-size-adjust": "100%", // Prevent iOS scaling
                   }}
                 >
                   {row.date}
@@ -115,6 +118,7 @@ function Achievements() {
                   sx={{
                     fontFamily: "Gupter, serif",
                     fontSize: isSmallScreen ? "medium" : "large",
+                    "-webkit-text-size-adjust": "100%", // Prevent iOS scaling
                   }}
                 >
                   {" "}
