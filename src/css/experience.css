@@ -26,13 +26,26 @@
   transition: max-height 0.7s ease-in, opacity 0.6s ease-in;
   max-height: 0;
   opacity: 0;
-  padding: 0 30px;
 }
 
 .accordion-content.expanded {
   max-height: 1000px; /* Adjust as needed */
   opacity: 1;
+}
+
+.accordion-inner {
+  padding: 0 30px;
+  transition: padding 0.7s ease-in;
+}
+
+.accordion-content.expanded .accordion-inner {
   padding: 30px;
+}
+
+@media (max-width: 768px) {
+  .accordion-content.expanded .accordion-inner {
+    padding-top: 10px;
+  }
 }
 
 .experience-title {
@@ -98,6 +111,27 @@ h6 {
   text-decoration: underline; /* Add underline on hover */
 }
 
+.role,
+.company {
+  text-align: left;
+  font-size: large;
+}
+
+@media (max-width: 768px) {
+  .role .company {
+    font-size: large;
+    text-align: left;
+    padding: 0;
+  }
+}
+
 .tasks {
   font-size: large;
+}
+
+@media (max-width: 768px) {
+  .tasks {
+    font-size: medium;
+    padding: 0 3px;
+  }
 }
