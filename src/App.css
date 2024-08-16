@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-.content-container{
+.content-container {
   display: flex;
   flex-direction: column;
   justify-items: center;
@@ -10,10 +10,14 @@
   margin: 20px auto;
 }
 
-.profile-photo{
+.profile-photo {
   height: 150px;
   width: 150px;
   margin: 0 auto;
 }
 
-
+@media (max-width: 768px) {
+  .content-container {
+    width: 95%;
+  }
+}
