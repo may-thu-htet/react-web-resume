@@ -8,6 +8,13 @@
   text-align: justify;
 }
 
+@media (max-width: 768px) {
+  .experience-container {
+    text-align: left;
+    font-size: medium;
+  }
+}
+
 .experience {
   background-color: #cce0ff;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
@@ -34,11 +41,23 @@
   margin-bottom: 0;
 }
 
+@media (max-width: 768px) {
+  .experience-title {
+    font-size: large;
+  }
+}
+
 .accordion-button,
 h6 {
   font-family: Gupter;
   font-size: large;
   margin: 0;
+}
+
+@media (max-width: 768px) {
+  .accordion-button {
+    font-size: medium;
+  }
 }
 
 .accordion-button {

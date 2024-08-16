@@ -8,6 +8,13 @@
   text-align: justify;
 }
 
+@media (max-width: 768px) {
+  .skills-container {
+    text-align: left;
+    font-size: medium;
+  }
+}
+
 .skills-title {
   font-family: Gupter;
   font-size: larger;

@@ -19,5 +19,6 @@
 @media (max-width: 768px) {
   .content-container {
     width: 95%;
+    text-align: left;
   }
 }

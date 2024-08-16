@@ -7,6 +7,7 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import "../css/achievement.css";
+import { useMediaQuery } from "@mui/material";
 
 function createData(date, achievement, link) {
   return { date, achievement, link };
@@ -61,6 +62,7 @@ const rows = [
 ];
 
 function Achievements() {
+  const isSmallScreen = useMediaQuery("(max-width:768px)");
   return (
     <div className="achievement-container">
       <h4 className="achievement-title">Achievements</h4>
@@ -76,7 +78,7 @@ function Achievements() {
                 sx={{
                   fontWeight: "bold",
                   fontFamily: "Gupter, serif",
-                  fontSize: "large",
+                  fontSize: isSmallScreen ? "medium" : "large",
                 }}
               >
                 Date
@@ -85,7 +87,7 @@ function Achievements() {
                 sx={{
                   fontWeight: "bold",
                   fontFamily: "Gupter, serif",
-                  fontSize: "large",
+                  fontSize: isSmallScreen ? "medium" : "large",
                 }}
               >
                 Achievements
@@ -102,12 +104,18 @@ function Achievements() {
                 }}
               >
                 <TableCell
-                  sx={{ fontFamily: "Gupter, serif", fontSize: "large" }}
+                  sx={{
+                    fontFamily: "Gupter, serif",
+                    fontSize: isSmallScreen ? "medium" : "large",
+                  }}
                 >
                   {row.date}
                 </TableCell>
                 <TableCell
-                  sx={{ fontFamily: "Gupter, serif", fontSize: "large" }}
+                  sx={{
+                    fontFamily: "Gupter, serif",
+                    fontSize: isSmallScreen ? "medium" : "large",
+                  }}
                 >
                   {" "}
                   <a href={row.link} target="_blank" rel="noopener noreferrer">

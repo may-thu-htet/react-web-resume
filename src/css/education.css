@@ -8,10 +8,23 @@
   text-align: justify;
 }
 
+@media (max-width: 768px) {
+  .education-container {
+    text-align: left;
+    font-size: medium;
+  }
+}
+
 .education-title {
   text-decoration: underline;
   font-size: larger;
   margin-bottom: 0px;
+}
+
+@media (max-width: 768px) {
+  .education-title {
+    font-size: large;
+  }
 }
 
 .university {
