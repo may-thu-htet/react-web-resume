@@ -60,6 +60,7 @@ function Skills() {
                   fontWeight: "bold",
                   fontFamily: "Gupter, serif",
                   fontSize: isSmallScreen ? "medium" : "large",
+                  "-webkit-text-size-adjust": "100%", // Prevent iOS scaling
                 }}
               >
                 Sector
@@ -69,6 +70,7 @@ function Skills() {
                   fontWeight: "bold",
                   fontFamily: "Gupter, serif",
                   fontSize: isSmallScreen ? "medium" : "large",
+                  "-webkit-text-size-adjust": "100%", // Prevent iOS scaling
                 }}
               >
                 Skills
@@ -88,6 +90,7 @@ function Skills() {
                   sx={{
                     fontFamily: "Gupter, serif",
                     fontSize: isSmallScreen ? "medium" : "large",
+                    "-webkit-text-size-adjust": "100%", // Prevent iOS scaling
                   }}
                 >
                   {row.sector}
@@ -96,6 +99,7 @@ function Skills() {
                   sx={{
                     fontFamily: "Gupter, serif",
                     fontSize: isSmallScreen ? "medium" : "large",
+                    "-webkit-text-size-adjust": "100%", // Prevent iOS scaling
                   }}
                 >
                   {" "}
