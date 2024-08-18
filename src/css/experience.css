@@ -86,11 +86,28 @@ h6 {
   padding: 10px;
   text-align: left;
   border-radius: 5px;
+  color: #000000; /* Set the default text color to black */
+  -webkit-appearance: none; /* Disable default styling on iOS */
+  -moz-appearance: none; /* Disable default styling on Firefox */
+  appearance: none; /* Standard property */
+}
+
+.accordion-button .icon,
+.accordion-button span,
+.accordion-button h6 {
+  color: #000000; /* Ensure icon and text are black */
 }
 
 .accordion-button:hover {
   background: linear-gradient(to right, #b576f5, #8cb8fa, #e996fa);
   border-radius: 5px;
+  color: #000000; /* Maintain black color on hover */
+}
+
+.accordion-button:focus,
+.accordion-button:active {
+  color: #000000; /* Ensure black color on focus/active */
+  outline: none; /* Remove default outline */
 }
 
 .icon {
