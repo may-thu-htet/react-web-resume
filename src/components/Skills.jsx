@@ -54,7 +54,7 @@ function Skills() {
           className="table"
         >
           <TableHead className="table-head">
-            <TableRow>
+            <TableRow className="table-head-row ">
               <TableCell
                 sx={{
                   fontWeight: "bold",
