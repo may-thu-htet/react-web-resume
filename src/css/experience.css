@@ -8,6 +8,13 @@
   text-align: justify;
 }
 
+@media (max-width: 768px) {
+  .experience-container {
+    text-align: left;
+    font-size: medium;
+  }
+}
+
 .experience {
   background-color: #cce0ff;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
@@ -19,13 +26,26 @@
   transition: max-height 0.7s ease-in, opacity 0.6s ease-in;
   max-height: 0;
   opacity: 0;
-  padding: 0 30px;
 }
 
 .accordion-content.expanded {
   max-height: 1000px; /* Adjust as needed */
   opacity: 1;
+}
+
+.accordion-inner {
+  padding: 0 30px;
+  transition: padding 0.7s ease-in;
+}
+
+.accordion-content.expanded .accordion-inner {
   padding: 30px;
+}
+
+@media (max-width: 768px) {
+  .accordion-content.expanded .accordion-inner {
+    padding-top: 10px;
+  }
 }
 
 .experience-title {
@@ -34,11 +54,23 @@
   margin-bottom: 0;
 }
 
+@media (max-width: 768px) {
+  .experience-title {
+    font-size: large;
+  }
+}
+
 .accordion-button,
 h6 {
   font-family: Gupter;
   font-size: large;
   margin: 0;
+}
+
+@media (max-width: 768px) {
+  .accordion-button {
+    font-size: medium;
+  }
 }
 
 .accordion-button {
@@ -54,11 +86,28 @@ h6 {
   padding: 10px;
   text-align: left;
   border-radius: 5px;
+  color: #000000; /* Set the default text color to black */
+  -webkit-appearance: none; /* Disable default styling on iOS */
+  -moz-appearance: none; /* Disable default styling on Firefox */
+  appearance: none; /* Standard property */
+}
+
+.accordion-button .icon,
+.accordion-button span,
+.accordion-button h6 {
+  color: #000000; /* Ensure icon and text are black */
 }
 
 .accordion-button:hover {
   background: linear-gradient(to right, #b576f5, #8cb8fa, #e996fa);
   border-radius: 5px;
+  color: #000000; /* Maintain black color on hover */
+}
+
+.accordion-button:focus,
+.accordion-button:active {
+  color: #000000; /* Ensure black color on focus/active */
+  outline: none; /* Remove default outline */
 }
 
 .icon {
@@ -79,6 +128,27 @@ h6 {
   text-decoration: underline; /* Add underline on hover */
 }
 
+.role,
+.company {
+  text-align: left;
+  font-size: large;
+}
+
+@media (max-width: 768px) {
+  .role .company {
+    font-size: large;
+    text-align: left;
+    padding: 0;
+  }
+}
+
 .tasks {
   font-size: large;
+}
+
+@media (max-width: 768px) {
+  .tasks {
+    font-size: medium;
+    padding: 0 3px;
+  }
 }

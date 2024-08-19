@@ -7,6 +7,7 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import "../css/skills.css";
+import { useMediaQuery } from "@mui/material";
 
 function createData(sector, skills) {
   return { sector, skills };
@@ -42,6 +43,7 @@ const rows = [
 ];
 
 function Skills() {
+  const isSmallScreen = useMediaQuery("(max-width:768px)");
   return (
     <div className="skills-container">
       <h4 className="skills-title">Skills</h4>
@@ -52,12 +54,13 @@ function Skills() {
           className="table"
         >
           <TableHead className="table-head">
-            <TableRow>
+            <TableRow className="table-head-row ">
               <TableCell
                 sx={{
                   fontWeight: "bold",
                   fontFamily: "Gupter, serif",
-                  fontSize: "large",
+                  fontSize: isSmallScreen ? "medium" : "large",
+                  "-webkit-text-size-adjust": "100%", // Prevent iOS scaling
                 }}
               >
                 Sector
@@ -66,7 +69,8 @@ function Skills() {
                 sx={{
                   fontWeight: "bold",
                   fontFamily: "Gupter, serif",
-                  fontSize: "large",
+                  fontSize: isSmallScreen ? "medium" : "large",
+                  "-webkit-text-size-adjust": "100%", // Prevent iOS scaling
                 }}
               >
                 Skills
@@ -85,7 +89,8 @@ function Skills() {
                 <TableCell
                   sx={{
                     fontFamily: "Gupter, serif",
-                    fontSize: "large",
+                    fontSize: isSmallScreen ? "medium" : "large",
+                    "-webkit-text-size-adjust": "100%", // Prevent iOS scaling
                   }}
                 >
                   {row.sector}
@@ -93,7 +98,8 @@ function Skills() {
                 <TableCell
                   sx={{
                     fontFamily: "Gupter, serif",
-                    fontSize: "large",
+                    fontSize: isSmallScreen ? "medium" : "large",
+                    "-webkit-text-size-adjust": "100%", // Prevent iOS scaling
                   }}
                 >
                   {" "}

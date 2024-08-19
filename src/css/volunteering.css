@@ -8,10 +8,23 @@
   text-align: justify;
 }
 
+@media (max-width: 768px) {
+  .volunteer-container {
+    text-align: left;
+    font-size: medium;
+  }
+}
+
 .volunteer-title {
   text-decoration: underline;
   font-size: larger;
   margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .volunteer-title {
+    font-size: large;
+  }
 }
 
 .volunteer-roles {

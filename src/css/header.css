@@ -46,3 +46,9 @@
   text-align: center;
   margin: 0;
 }
+/* Media query for small and extra small screens */
+@media (max-width: 768px) {
+  .center-section {
+    display: none;
+  }
+}

@@ -8,11 +8,24 @@
   text-align: justify;
 }
 
+@media (max-width: 768px) {
+  .summary-container {
+    text-align: left;
+    font-size: medium;
+  }
+}
+
 .visa-status {
   font-size: larger;
   font-style: italic;
   font-weight: bold;
   margin: 10px 0 0 0;
+}
+
+@media (max-width: 768px) {
+  .visa-status {
+    font-size: large;
+  }
 }
 
 .self-description {

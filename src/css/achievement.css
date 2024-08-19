@@ -1,4 +1,5 @@
 .achievement-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -8,6 +9,14 @@
   text-align: justify;
 }
 
+@media (max-width: 768px) {
+  .achievement-container {
+    position: relative;
+    text-align: left;
+    font-size: medium;
+  }
+}
+
 .achievement-title {
   font-family: Gupter;
   font-size: larger;
@@ -15,15 +24,36 @@
   text-decoration: underline;
 }
 
+@media (max-width: 768px) {
+  .achievement-title {
+    font-size: large;
+  }
+}
+
+.table-container {
+  position: relative;
+  overflow-x: auto; /* Enables horizontal scrolling if needed */
+}
+
 .table {
+  position: relative;
   background-color: #c1d7f9;
+  min-width: 100%; /* Ensures the table takes up full width */
+  table-layout: auto; /* Allows columns to adjust based on content */
 }
 
 .table-head {
-  width: 100%;
-  background: linear-gradient(to right, #e996fa, #8cb8fa, #b576f5);
+  position: relative; /* Establishes a positioning context for the pseudo-element */
+  z-index: 1; /* Ensure header content is above the pseudo-element */
+  overflow: hidden; /* Ensures pseudo-element does not overflow */
+  display: flex;
+  flex-direction: column; /* Ensure header cells stack correctly */
 }
 
+.table-head th {
+  background: linear-gradient(to right, #e996fa, #8cb8fa, #b576f5);
+  text-align: left;
+}
 .table a {
   text-decoration: none; /* Remove underline */
   color: inherit; /* Use the color of the parent element */
@@ -31,4 +61,17 @@
 
 .table a:hover {
   text-decoration: underline; /* Add underline on hover */
+}
+
+/* Media query for small and extra small screens */
+@media (max-width: 768px) {
+  .table {
+    font-size: medium; /* Reduce font size on smaller screens */
+  }
+
+  .table-head th,
+  .table-body td {
+    font-size: medium; /* Further reduce font size for readability */
+    white-space: nowrap; /* Prevents text wrapping */
+  }
 }

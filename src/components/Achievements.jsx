@@ -7,6 +7,7 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import "../css/achievement.css";
+import { useMediaQuery } from "@mui/material";
 
 function createData(date, achievement, link) {
   return { date, achievement, link };
@@ -61,64 +62,83 @@ const rows = [
 ];
 
 function Achievements() {
+  const isSmallScreen = useMediaQuery("(max-width:768px)");
+
   return (
     <div className="achievement-container">
       <h4 className="achievement-title">Achievements</h4>
-      <TableContainer component={Paper} className="table-container">
-        <Table
-          sx={{ minWidth: 650 }}
-          aria-label="simple table"
-          className="table"
-        >
-          <TableHead className="table-head">
-            <TableRow>
-              <TableCell
-                sx={{
-                  fontWeight: "bold",
-                  fontFamily: "Gupter, serif",
-                  fontSize: "large",
-                }}
-              >
-                Date
-              </TableCell>
-              <TableCell
-                sx={{
-                  fontWeight: "bold",
-                  fontFamily: "Gupter, serif",
-                  fontSize: "large",
-                }}
-              >
-                Achievements
-              </TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {rows.map((row) => (
-              <TableRow
-                key={row.date}
-                sx={{
-                  "&:last-child td, &:last-child th": { border: 0 },
-                  "&:hover": { backgroundColor: "#d5b5f4" },
-                }}
-              >
+
+      <div className="table-wrapper">
+        <TableContainer component={Paper} className="table-container">
+          <Table
+            sx={{ minWidth: 650 }}
+            aria-label="simple table"
+            className="table"
+          >
+            <TableHead className="table-head">
+              <TableRow className="table-head-row">
                 <TableCell
-                  sx={{ fontFamily: "Gupter, serif", fontSize: "large" }}
+                  sx={{
+                    fontWeight: "bold",
+                    fontFamily: "Gupter, serif",
+                    fontSize: isSmallScreen ? "medium" : "large",
+                    "-webkit-text-size-adjust": "100%", // Prevent iOS scaling
+                  }}
                 >
-                  {row.date}
+                  Date
                 </TableCell>
                 <TableCell
-                  sx={{ fontFamily: "Gupter, serif", fontSize: "large" }}
+                  sx={{
+                    fontWeight: "bold",
+                    fontFamily: "Gupter, serif",
+                    fontSize: isSmallScreen ? "medium" : "large",
+                    "-webkit-text-size-adjust": "100%", // Prevent iOS scaling
+                  }}
                 >
-                  {" "}
-                  <a href={row.link} target="_blank" rel="noopener noreferrer">
-                    {row.achievement}
-                  </a>
+                  Achievements
                 </TableCell>
               </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
+            </TableHead>
+            <TableBody>
+              {rows.map((row) => (
+                <TableRow
+                  key={row.date}
+                  sx={{
+                    "&:last-child td, &:last-child th": { border: 0 },
+                    "&:hover": { backgroundColor: "#d5b5f4" },
+                  }}
+                >
+                  <TableCell
+                    sx={{
+                      fontFamily: "Gupter, serif",
+                      fontSize: isSmallScreen ? "medium" : "large",
+                      "-webkit-text-size-adjust": "100%", // Prevent iOS scaling
+                    }}
+                  >
+                    {row.date}
+                  </TableCell>
+                  <TableCell
+                    sx={{
+                      fontFamily: "Gupter, serif",
+                      fontSize: isSmallScreen ? "medium" : "large",
+                      "-webkit-text-size-adjust": "100%", // Prevent iOS scaling
+                    }}
+                  >
+                    {" "}
+                    <a
+                      href={row.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {row.achievement}
+                    </a>
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      </div>
     </div>
   );
 }
